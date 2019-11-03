@@ -1,0 +1,30 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://118.190.58.175:13306/LICSLAN?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 123456
+    tomcat:
+      initial-size: 20
+      max-active: 100
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+mybatis:
+  mapper-locations: classpath:xml/*.xml
+  type-aliases-package: com.licslan.licslan.po
+
+
+
+# sql output level
+logging:
+  level:
+    com:
+      licslan:
+        licslan:
+          po: debug
+
